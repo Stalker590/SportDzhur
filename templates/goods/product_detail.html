@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="product-detail-container">
+    <div class="product-detail">
+        <div class="product-detail-image">
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+        </div>
+        <div class="product-detail-info">
+            <h2>{{ product.name }}</h2>
+            <p class="product-detail-price">{{ product.price }} грн</p>
+            <div class="product-detail-description">
+                <h3>Опис товару:</h3>
+                <p>{{ product.description }}</p>
+            </div>
+            <div class="product-detail-actions">
+                <button class="buy-button" id="buy-button" data-product-id="{{ product.id }}">Купити</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Тут пізніше додамо PayPal інтеграцію -->
+    <div id="paypal-button-container" style="display: none;"></div>
+</div>
+{% endblock %}

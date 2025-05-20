@@ -22,6 +22,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),  # Добавляем маршруты для главной страницы
+    path('goods/', include('goods.urls', namespace='goods')),  # Додаємо маршрути для товарів
 ]
 
 # Добавляем обработку медиа-файлов в режиме разработки

@@ -22,7 +22,11 @@
                 <h1>Sport-Dzhur</h1>
             </div>
             <nav>
-                <!-- Здесь будут кнопки навигации -->
+                <ul class="nav-links">
+                    <li><a href="{% url 'home' %}">Головна</a></li>
+                    <li><a href="{% url 'goods:product_list' %}">Товари</a></li>
+                    <!-- Інші пункти меню -->
+                </ul>
             </nav>
         </div>
     </header>

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',  # Добавляем наше новое приложение
+    'goods',  # Додаємо додаток для товарів
 ]
 
 MIDDLEWARE = [
