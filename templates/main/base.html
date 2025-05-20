@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport-Dzhur</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="{% static 'video/background.mp4' %}" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+    </div>
+    
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="{% static 'image/logo.png' %}" alt="Sport-Dzhur Logo" class="logo">
+                <h1>Sport-Dzhur</h1>
+            </div>
+            <nav>
+                <!-- Здесь будут кнопки навигации -->
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <!-- Здесь будет справочная информация и ссылки -->
+        </div>
+    </footer>
+    
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
